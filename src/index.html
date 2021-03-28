@@ -1,0 +1,167 @@
+<!DOCTYPE html !ATTLIST tag person_data name CDATA #REQUIRED removed (true|false) #REQUIRED selected (true|false) #REQUIRED>
+<html lang="en">
+    <head>
+        <meta
+            charset="UTF-8"
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Alles Gute zum Geburtstag, Julchen!</title>
+        <link rel="shortcut icon" type="image/jpg" href="{{ navbar_img }}" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css"
+        />
+    </head>
+
+    <body onload="reset_game()">
+        <div class="container">
+            <!--navbar-->
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="{{ navbar_img }}"
+                        width="30"
+                        height="30"
+                        class="d-inline-block align-top"
+                        alt=""
+                    />
+                    Alles Gute zum Geburtstag, Julchen!
+                </a>
+            </nav>
+            <!--heading-->
+            <h1>Wer bin ich?</h1>
+            <!--menu-->
+            <button
+                type="button"
+                id="change-player-button"
+                onclick="update_selection()"
+                class="btn btn-primary"
+            >
+                Spieler wechseln
+            </button>
+            <button type="button" onclick="reset_game()" class="btn btn-danger">
+                Spiel zurücksetzen
+            </button>
+            </br>
+            <p id="status-box"></p>
+            <p id="warning-box"></p>
+            <p id="left-box"></p>
+
+            <!--people image grid-->
+            <div class="clearfix" id="people">
+                {% for person in people %}
+                <a
+                    href="javascript: click_person('{{ person.id }}')"
+                    id="{{ person.id }}"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="{{ person.name }}"
+                        gender="{{ person.gender }}"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/{{ person.img_name }}"
+                        alt="{{ person.name }}"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                {% endfor %}
+            </div>
+
+            <!--modal-->
+            <div
+                class="modal fade"
+                id="win-modal"
+                tabindex="-1"
+                aria-labelledby="win-modal"
+                aria-modal="true"
+                role="dialog"
+            >
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="win-modal-heading">
+                                Du hast gewonnen!</br>
+                                oder gecheatet...
+                            </h5>
+                            <!--<button
+                                type="button"
+                                class="close"
+                                aria-label="Close"
+                                onclick="closeModal()"
+                            >
+                                <span aria-hidden="true">&times;</span>
+                            </button>-->
+                        </div>
+                        <div class="modal-body">
+                            <p id="win-modal-text"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                class="btn btn-warning modal-default-hide"
+                                id="pascal-button"
+                                onclick="window.location.assign('https://youtu.be/dQw4w9WgXcQ')"
+                                hidden="true"
+                            >
+                                Get your Trophy!
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                onclick="close_modal('win-modal')"
+                            >
+                                Schließen
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-danger"
+                                onclick="close_modal('win-modal'); reset_game()"
+                            >
+                                Spiel zurücksetzen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--footer-->
+            <footer class="page-footer font-small">
+                <div class="footer-copyright text-center py-3">
+                    © 2021 Copyright:
+                    <a href="https://github.com/christopher-besch">Christopher Besch</a></br>
+                    Alle Bilder wurden in Absprache mit den entsprechenden Urheberrechtsinhabern verwendet.
+                </div>
+            </footer>
+
+        </div>
+        <!--modal backdrop-->
+        <div
+            class="modal-backdrop fade show"
+            id="backdrop"
+            style="display: none"
+        ></div>
+
+        <!--image stores-->
+        <div id="glare-store">
+            {% for glare in glares %}
+            <img src="{{ glare }}" style="width: 0%" />
+            {% endfor %}
+        </div>
+        <div id="border-store">
+            {% for border in borders %}
+            <img src="{{ border }}" style="width: 0%" />
+            {% endfor %}
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,767 @@
+<!DOCTYPE html !ATTLIST tag person_data name CDATA #REQUIRED removed (true|false) #REQUIRED selected (true|false) #REQUIRED>
+<html lang="en">
+    <head>
+        <meta
+            charset="UTF-8"
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Alles Gute zum Geburtstag, Julchen!</title>
+        <link rel="shortcut icon" type="image/jpg" href="images/navbar.png" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css"
+        />
+    </head>
+
+    <body onload="reset_game()">
+        <div class="container">
+            <!--navbar-->
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="images/navbar.png"
+                        width="30"
+                        height="30"
+                        class="d-inline-block align-top"
+                        alt=""
+                    />
+                    Alles Gute zum Geburtstag, Julchen!
+                </a>
+            </nav>
+            <!--heading-->
+            <h1>Wer bin ich?</h1>
+            <!--menu-->
+            <button
+                type="button"
+                id="change-player-button"
+                onclick="update_selection()"
+                class="btn btn-primary"
+            >
+                Spieler wechseln
+            </button>
+            <button type="button" onclick="reset_game()" class="btn btn-danger">
+                Spiel zurücksetzen
+            </button>
+            </br>
+            <p id="status-box"></p>
+            <p id="warning-box"></p>
+            <p id="left-box"></p>
+
+            <!--people image grid-->
+            <div class="clearfix" id="people">
+                
+                <a
+                    href="javascript: click_person('person-chris20')"
+                    id="person-chris20"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris20"
+                        gender="m"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris20"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris14')"
+                    id="person-chris14"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris14"
+                        gender="m"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris14"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris18')"
+                    id="person-chris18"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris18"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris18"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris22')"
+                    id="person-chris22"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris22"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris22"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris8')"
+                    id="person-chris8"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris8"
+                        gender="m"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris8"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris10')"
+                    id="person-chris10"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris10"
+                        gender="m"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris10"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris27')"
+                    id="person-chris27"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris27"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris27"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris17')"
+                    id="person-chris17"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris17"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris17"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris26')"
+                    id="person-chris26"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris26"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris26"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris24')"
+                    id="person-chris24"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris24"
+                        gender="m"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris24"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris15')"
+                    id="person-chris15"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris15"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris15"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris3')"
+                    id="person-chris3"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris3"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris3"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris6')"
+                    id="person-chris6"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris6"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris6"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris4')"
+                    id="person-chris4"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris4"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris4"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris19')"
+                    id="person-chris19"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris19"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris19"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris13')"
+                    id="person-chris13"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris13"
+                        gender="m"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris13"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris25')"
+                    id="person-chris25"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris25"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris25"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris7')"
+                    id="person-chris7"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris7"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris7"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris23')"
+                    id="person-chris23"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris23"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris23"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris2')"
+                    id="person-chris2"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris2"
+                        gender="m"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris2"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris5')"
+                    id="person-chris5"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris5"
+                        gender="m"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris5"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris1')"
+                    id="person-chris1"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris1"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris1"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris9')"
+                    id="person-chris9"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris9"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris9"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris11')"
+                    id="person-chris11"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris11"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris11"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris16')"
+                    id="person-chris16"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris16"
+                        gender="m"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris16"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris21')"
+                    id="person-chris21"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris21"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris21"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris12')"
+                    id="person-chris12"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris12"
+                        gender="w"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris12"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+                <a
+                    href="javascript: click_person('person-chris')"
+                    id="person-chris"
+                    class="img-container img-thumbnail"
+                >
+                    <person_data
+                        name="Chris"
+                        gender="m"
+                        removed="false"
+                        selected="false"
+                    />
+                    <img
+                        src="images/people/chris.png"
+                        alt="Chris"
+                        style="
+                            width: 100%;
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                        "
+                    />
+                </a>
+                
+            </div>
+
+            <!--modal-->
+            <div
+                class="modal fade"
+                id="win-modal"
+                tabindex="-1"
+                aria-labelledby="win-modal"
+                aria-modal="true"
+                role="dialog"
+            >
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="win-modal-heading">
+                                Du hast gewonnen!</br>
+                                oder gecheatet...
+                            </h5>
+                            <!--<button
+                                type="button"
+                                class="close"
+                                aria-label="Close"
+                                onclick="closeModal()"
+                            >
+                                <span aria-hidden="true">&times;</span>
+                            </button>-->
+                        </div>
+                        <div class="modal-body">
+                            <p id="win-modal-text"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                class="btn btn-warning modal-default-hide"
+                                id="pascal-button"
+                                onclick="window.location.assign('https://youtu.be/dQw4w9WgXcQ')"
+                                hidden="true"
+                            >
+                                Get your Trophy!
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                onclick="close_modal('win-modal')"
+                            >
+                                Schließen
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-danger"
+                                onclick="close_modal('win-modal'); reset_game()"
+                            >
+                                Spiel zurücksetzen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--footer-->
+            <footer class="page-footer font-small">
+                <div class="footer-copyright text-center py-3">
+                    © 2021 Copyright:
+                    <a href="https://github.com/christopher-besch">Christopher Besch</a></br>
+                    Alle Bilder wurden in Absprache mit den entsprechenden Urheberrechtsinhabern verwendet.
+                </div>
+            </footer>
+
+        </div>
+        <!--modal backdrop-->
+        <div
+            class="modal-backdrop fade show"
+            id="backdrop"
+            style="display: none"
+        ></div>
+
+        <!--image stores-->
+        <div id="glare-store">
+            
+            <img src="images/glares/glare0.png" style="width: 0%" />
+            
+            <img src="images/glares/glare1.png" style="width: 0%" />
+            
+            <img src="images/glares/glare2.png" style="width: 0%" />
+            
+            <img src="images/glares/glare3.png" style="width: 0%" />
+            
+        </div>
+        <div id="border-store">
+            
+            <img src="images/borders/border0.png" style="width: 0%" />
+            
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
