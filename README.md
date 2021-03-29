@@ -10,7 +10,8 @@ To create the web page one has to execute the build script with `./build.sh`.
 
 ## Requirements
 
--   Python3
 -   TypeScript Compiler
+-   Python3
+-   Jinja2
 -   inliner
     -   can be installed with `pip3 install inliner`
